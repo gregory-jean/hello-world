@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace GregsPlayground
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
+
+            for (int i = 0; i < args.Length; i++)
+            {
+                Console.Write(i);
+                Console.WriteLine(args[i]);
+            }
         }
     }
 }
