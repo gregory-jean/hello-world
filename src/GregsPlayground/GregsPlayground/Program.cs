@@ -18,5 +18,21 @@ namespace GregsPlayground
                 }
             }
         }
+
+        private static void PlayingWithExceptions(string exeptionName)
+        {
+            try
+            {
+                int y = int.Parse(exeptionName);
+            }          
+            catch (FormatException fe)
+            {
+                Console.WriteLine(exeptionName + " is not a number");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
     }
 }
