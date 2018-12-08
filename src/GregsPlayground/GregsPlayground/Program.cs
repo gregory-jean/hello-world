@@ -10,11 +10,12 @@ namespace GregsPlayground
     {
         public static void Main(string[] args)
         {
-
             for (int i = 0; i < args.Length; i++)
             {
-                Console.Write(i);
-                Console.WriteLine(args[i]);
+                if (args[i].Equals("Panda", StringComparison.OrdinalIgnoreCase))
+                {
+                    Console.WriteLine("Panda's favorite food is bamboo.");
+                }
             }
         }
     }
