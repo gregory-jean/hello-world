@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace GregsPlayground
 {
@@ -10,13 +11,7 @@ namespace GregsPlayground
     {
         public static void Main(string[] args)
         {
-            for (int i = 0; i < args.Length; i++)
-            {
-                if (args[i].Equals("Panda", StringComparison.OrdinalIgnoreCase))
-                {
-                    Console.WriteLine("Panda's favorite food is bamboo.");
-                }
-            }
+            Compare(args);
         }
 
         private static void PlayingWithExceptions(string exeptionName)
@@ -34,5 +29,16 @@ namespace GregsPlayground
                 Console.WriteLine(ex);
             }
         }
+
+        private static void Compare(string[] args)
+        {
+            for (int i = 0; i < args.Length; i++)
+            {
+                if (args[i].Equals("Panda", StringComparison.OrdinalIgnoreCase))
+                {
+                    Console.WriteLine("Panda's favorite food is bamboo.");
+                }
+            }
+        } 
     }
 }
