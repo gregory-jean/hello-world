@@ -11,7 +11,25 @@ namespace GregsPlayground
     {
         public static void Main(string[] args)
         {
-            Compare(args);
+            if (args.Length == 0)
+            {
+                throw new Exception("No file name entered.");
+            }
+
+            string fileName = args[0];
+
+            for (int i = 1; i < args.Length; i++)
+            {
+                WriteToFile(fileName, args[i]);
+            }
+
+        }
+
+        private static void WriteToFile(string pathToFile, string line)
+        {
+            StreamWriter writer = new StreamWriter(pathToFile, true);
+            writer.WriteLine(line);
+            writer.Close();
         }
 
         private static void PlayingWithExceptions(string exeptionName)
